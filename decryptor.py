@@ -2,6 +2,10 @@ import os, re
 
 os.system("apktool d decryptor.apk -o decryptor")
 
+try:
+	os.mkdir("decryptor/res/drawable/")
+except:
+	pass
 input("Please place encrypted bmp in decryptor/res/drawable/ and then press enter to continue")
 
 os.system("apktool b decryptor -o decryptor.new.apk")
